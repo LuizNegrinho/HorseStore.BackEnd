@@ -1,4 +1,5 @@
-﻿using HorseStore.BackEnd.Repositories;
+﻿using HorseStore.BackEnd.Application;
+using HorseStore.BackEnd.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HorseStore.BackEnd.Controllers
@@ -7,18 +8,26 @@ namespace HorseStore.BackEnd.Controllers
     [Route("api/[controller]")]
     public class ProductsController : Controller
     {
-        private readonly IHorseRepository _horseRepository;
+        private readonly IProductRepository _productRepository;
+        private readonly IProductApplication _productApplication;
 
-        public ProductsController(IHorseRepository horseRepository)
+        public ProductsController(IProductRepository productRepository, IProductApplication productApplication)
         {
-            _horseRepository = horseRepository;
+            _productRepository = productRepository;
+            _productApplication = productApplication;
         }
                 
 
         [HttpGet("GetIndex")]
         public IActionResult Index([FromQuery] int userId)
         {
-            return Ok(_horseRepository.GetIndex(userId));
+            return Ok(_productRepository.GetIndex(userId));
+        }
+
+        [HttpGet("GetBids")]
+        public IActionResult GetBids([FromQuery] int productId)
+        {
+            return Ok(_productApplication.GetBids(productId));
         }
     }
 }

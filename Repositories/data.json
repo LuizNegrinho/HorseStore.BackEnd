@@ -1,4 +1,4 @@
-{
+Ôªø{
   "Users": [
     {
       "Id": 1,
@@ -18,7 +18,7 @@
     },
     {
       "Id": 3,
-      "Name": "Jo„o",
+      "Name": "Jo√£o",
       "Username": "joao456",
       "Password": "secret",
       "Email": "joao@gmail.com",
@@ -42,20 +42,20 @@
     }
 
   ],
-  "BIds": [
+  "Bids": [
     {
       "Id": 1,
       "UserId": 1,
-      "lotId": 1,
-      "Username": "Jo„o da Silva",
-      "Location": "S„o Paulo",
+      "LotId": 1,
+      "Username": "Jo√£o da Silva",
+      "Location": "S√£o Paulo",
       "Date": "2023-07-09",
       "Value": 100
     },
     {
       "Id": 2,
       "UserId": 2,
-      "lotId": 1,
+      "LotId": 1,
       "Username": "Maria Santos",
       "Location": "Rio de Janeiro",
       "Date": "2023-07-10",
@@ -64,7 +64,7 @@
     {
       "Id": 3,
       "UserId": 3,
-      "lotId": 1,
+      "LotId": 1,
       "Username": "Pedro Oliveira",
       "Location": "Belo Horizonte",
       "Date": "2023-07-11",
@@ -73,7 +73,7 @@
     {
       "Id": 4,
       "UserId": 4,
-      "lotId": 1,
+      "LotId": 1,
       "Username": "Ana Costa",
       "Location": "Salvador",
       "Date": "2023-07-12",
@@ -82,11 +82,47 @@
     {
       "Id": 5,
       "UserId": 5,
-      "lotId": 1,
+      "LotId": 1,
       "Username": "Rafael Souza",
       "Location": "Curitiba",
       "Date": "2023-07-13",
       "Value": 220
+    },
+    {
+      "Id": 6,
+      "UserId": 4,
+      "LotId": 2,
+      "Username": "Ana Costa",
+      "Location": "Salvador",
+      "Date": "2023-07-12",
+      "Value": 180
+    },
+    {
+      "Id": 7,
+      "UserId": 5,
+      "LotId": 2,
+      "Username": "Rafael Souza",
+      "Location": "Curitiba",
+      "Date": "2023-07-13",
+      "Value": 220
+    },
+    {
+      "Id": 8,
+      "UserId": 4,
+      "LotId": 3,
+      "Username": "Ana Costa",
+      "Location": "Salvador",
+      "Date": "2023-07-12",
+      "Value": 180
+    },
+    {
+      "Id": 9,
+      "UserId": 6,
+      "LotId": 3,
+      "Username": "Mario Calhambas",
+      "Location": "Macaparana",
+      "Date": "2023-07-13",
+      "Value": 300
     }
   ],
   "Lots": [
@@ -99,7 +135,7 @@
       "sellPrice": 10000,
       "MinPrice": 5000,
       "Mother": "Dalila Luxor",
-      "Father": "Carv„o VB",
+      "Father": "Carv√£o VB",
       "MaxBId": "5000",
       "MaxBIdUserId": 1
     },
@@ -110,9 +146,9 @@
       "Sufix": "Estrela Negra",
       "birthDate": "2023-03-15",
       "sellPrice": 10000,
-      "MinPrice": 5000,      
+      "MinPrice": 5000,
       "Mother": "Dalila Luxor",
-      "Father": "Carv„o VB",
+      "Father": "Carv√£o VB",
       "MaxBId": "5000",
       "MaxBIdUserId": 1
     },
@@ -123,9 +159,9 @@
       "Sufix": "Estrela Negra",
       "birthDate": "2023-01-01",
       "sellPrice": 10000,
-      "MinPrice": 5000,      
+      "MinPrice": 5000,
       "Mother": "Dalila Luxor",
-      "Father": "Carv„o VB",
+      "Father": "Carv√£o VB",
       "MaxBId": "5000",
       "MaxBIdUserId": 1
     },
@@ -138,7 +174,7 @@
       "sellPrice": 10000,
       "MinPrice": 5000,
       "Mother": "Dalila Luxor",
-      "Father": "Carv„o VB",
+      "Father": "Carv√£o VB",
       "MaxBId": "5000",
       "MaxBIdUserId": 1
     },
@@ -149,9 +185,9 @@
       "Sufix": "Estrela Negra",
       "birthDate": "2023-01-01",
       "sellPrice": 10000,
-      "MinPrice": 5000,      
+      "MinPrice": 5000,
       "Mother": "Dalila Luxor",
-      "Father": "Carv„o VB",
+      "Father": "Carv√£o VB",
       "MaxBId": "5000",
       "MaxBIdUserId": 1
     },
@@ -162,9 +198,9 @@
       "Sufix": "Estrela Negra",
       "birthDate": "2023-03-15",
       "sellPrice": 10000,
-      "MinPrice": 5000,      
+      "MinPrice": 5000,
       "Mother": "Dalila Luxor",
-      "Father": "Carv„o VB",
+      "Father": "Carv√£o VB",
       "MaxBId": "5000",
       "MaxBIdUserId": 1
     }

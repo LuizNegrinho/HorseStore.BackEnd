@@ -7,7 +7,8 @@ namespace HorseStore.BackEnd
     {
         public static void Injection(this IServiceCollection services)
         {
-            services.AddScoped<IHorseRepository, HorseRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductApplication, ProductApplication>();
             services.AddScoped<ILoginApplication, LoginApplication>();
             services.AddScoped<ILoginRepository, LoginRepository>();
         }
