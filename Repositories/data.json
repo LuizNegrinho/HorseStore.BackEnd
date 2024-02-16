@@ -1,0 +1,172 @@
+{
+  "Users": [
+    {
+      "Id": 1,
+      "Name": "Luiz",
+      "Username": "admin",
+      "Password": "123",
+      "Email": "luizavm@gmail.com",
+      "Phone": "81989366459"
+    },
+    {
+      "Id": 2,
+      "Name": "Maria",
+      "Username": "maria123",
+      "Password": "Password123",
+      "Email": "maria@example.com",
+      "Phone": "1234567890"
+    },
+    {
+      "Id": 3,
+      "Name": "João",
+      "Username": "joao456",
+      "Password": "secret",
+      "Email": "joao@gmail.com",
+      "Phone": "9876543210"
+    },
+    {
+      "Id": 4,
+      "Name": "Ana",
+      "Username": "ana17",
+      "Password": "myPassword",
+      "Email": "ana@example.com",
+      "Phone": "5555555555"
+    },
+    {
+      "Id": 5,
+      "Name": "Pedro",
+      "Username": "pedro99",
+      "Password": "pass123",
+      "Email": "pedro@example.com",
+      "Phone": "9999999999"
+    }
+
+  ],
+  "BIds": [
+    {
+      "Id": 1,
+      "UserId": 1,
+      "lotId": 1,
+      "Username": "João da Silva",
+      "Location": "São Paulo",
+      "Date": "2023-07-09",
+      "Value": 100
+    },
+    {
+      "Id": 2,
+      "UserId": 2,
+      "lotId": 1,
+      "Username": "Maria Santos",
+      "Location": "Rio de Janeiro",
+      "Date": "2023-07-10",
+      "Value": 200
+    },
+    {
+      "Id": 3,
+      "UserId": 3,
+      "lotId": 1,
+      "Username": "Pedro Oliveira",
+      "Location": "Belo Horizonte",
+      "Date": "2023-07-11",
+      "Value": 150
+    },
+    {
+      "Id": 4,
+      "UserId": 4,
+      "lotId": 1,
+      "Username": "Ana Costa",
+      "Location": "Salvador",
+      "Date": "2023-07-12",
+      "Value": 180
+    },
+    {
+      "Id": 5,
+      "UserId": 5,
+      "lotId": 1,
+      "Username": "Rafael Souza",
+      "Location": "Curitiba",
+      "Date": "2023-07-13",
+      "Value": 220
+    }
+  ],
+  "Lots": [
+    {
+      "Id": 1,
+      "ImageUrl": "assets/img/lotes/lote1.JPG",
+      "Name": "Hayabusa",
+      "Sufix": "Estrela Negra",
+      "birthDate": "2023-01-01",
+      "sellPrice": 10000,
+      "MinPrice": 5000,
+      "Mother": "Dalila Luxor",
+      "Father": "Carvão VB",
+      "MaxBId": "5000",
+      "MaxBIdUserId": 1
+    },
+    {
+      "Id": 2,
+      "ImageUrl": "assets/img/lotes/lote2.JPG",
+      "Name": "Helix",
+      "Sufix": "Estrela Negra",
+      "birthDate": "2023-03-15",
+      "sellPrice": 10000,
+      "MinPrice": 5000,      
+      "Mother": "Dalila Luxor",
+      "Father": "Carvão VB",
+      "MaxBId": "5000",
+      "MaxBIdUserId": 1
+    },
+    {
+      "Id": 3,
+      "ImageUrl": "assets/img/lotes/lote3.jpg",
+      "Name": "Hades",
+      "Sufix": "Estrela Negra",
+      "birthDate": "2023-01-01",
+      "sellPrice": 10000,
+      "MinPrice": 5000,      
+      "Mother": "Dalila Luxor",
+      "Father": "Carvão VB",
+      "MaxBId": "5000",
+      "MaxBIdUserId": 1
+    },
+    {
+      "Id": 4,
+      "ImageUrl": "assets/img/lotes/lote4.jpg",
+      "Name": "Hoshi",
+      "Sufix": "Estrela Negra",
+      "birthDate": "2023-03-15",
+      "sellPrice": 10000,
+      "MinPrice": 5000,
+      "Mother": "Dalila Luxor",
+      "Father": "Carvão VB",
+      "MaxBId": "5000",
+      "MaxBIdUserId": 1
+    },
+    {
+      "Id": 5,
+      "ImageUrl": "assets/img/lotes/lote5.jpg",
+      "Name": "Hyperion",
+      "Sufix": "Estrela Negra",
+      "birthDate": "2023-01-01",
+      "sellPrice": 10000,
+      "MinPrice": 5000,      
+      "Mother": "Dalila Luxor",
+      "Father": "Carvão VB",
+      "MaxBId": "5000",
+      "MaxBIdUserId": 1
+    },
+    {
+      "Id": 6,
+      "ImageUrl": "assets/img/lotes/lote6.JPG",
+      "Name": "Hera",
+      "Sufix": "Estrela Negra",
+      "birthDate": "2023-03-15",
+      "sellPrice": 10000,
+      "MinPrice": 5000,      
+      "Mother": "Dalila Luxor",
+      "Father": "Carvão VB",
+      "MaxBId": "5000",
+      "MaxBIdUserId": 1
+    }
+  ]
+}
