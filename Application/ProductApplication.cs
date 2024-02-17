@@ -11,10 +11,22 @@ namespace HorseStore.BackEnd.Application
             _repository = repository;
         }
 
+
         public IEnumerable<Bid> GetBids(int productId)
         {
             var bids = _repository.GetBids(productId).Where(bid => bid.LotId == productId);
             return bids;
+        }
+
+        public Bid InsertBid(Bid bid)
+        {
+            _ = new Bid();
+            Bid newBid = _repository.InsertBid(bid);
+            return newBid;
+        }
+        public bool DeleteBid(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

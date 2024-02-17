@@ -6,5 +6,6 @@ namespace HorseStore.BackEnd.Repositories
     {
         IEnumerable<Bid> GetBids(int productId);
         IEnumerable<Lot> GetIndex(int id);
+        Bid InsertBid(Bid bid);
     }
 }

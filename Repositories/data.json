@@ -18,7 +18,7 @@
     },
     {
       "Id": 3,
-      "Name": "João",
+      "Name": "Jo\u00E3o",
       "Username": "joao456",
       "Password": "secret",
       "Email": "joao@gmail.com",
@@ -40,15 +40,14 @@
       "Email": "pedro@example.com",
       "Phone": "9999999999"
     }
-
   ],
   "Bids": [
     {
       "Id": 1,
       "UserId": 1,
       "LotId": 1,
-      "Username": "João da Silva",
-      "Location": "São Paulo",
+      "Username": "Jo\u00E3o da Silva",
+      "Location": "S\u00E3o Paulo",
       "Date": "2023-07-09",
       "Value": 100
     },
@@ -123,6 +122,15 @@
       "Location": "Macaparana",
       "Date": "2023-07-13",
       "Value": 300
+    },
+    {
+      "Id": 10,
+      "UserId": 2,
+      "LotId": 3,
+      "Username": "Matias",
+      "Location": "Timba\u00FAba",
+      "Date": "2024-02-16",
+      "Value": 4820
     }
   ],
   "Lots": [
@@ -131,78 +139,84 @@
       "ImageUrl": "assets/img/lotes/lote1.JPG",
       "Name": "Hayabusa",
       "Sufix": "Estrela Negra",
-      "birthDate": "2023-01-01",
-      "sellPrice": 10000,
+      "BirthDate": null,
+      "SellPrice": 0,
       "MinPrice": 5000,
+      "Bids": null,
       "Mother": "Dalila Luxor",
-      "Father": "Carvão VB",
-      "MaxBId": "5000",
-      "MaxBIdUserId": 1
+      "Father": "Carv\u00E3o VB",
+      "MaxBid": null,
+      "MaxBidUserId": 0
     },
     {
       "Id": 2,
       "ImageUrl": "assets/img/lotes/lote2.JPG",
       "Name": "Helix",
       "Sufix": "Estrela Negra",
-      "birthDate": "2023-03-15",
-      "sellPrice": 10000,
+      "BirthDate": null,
+      "SellPrice": 0,
       "MinPrice": 5000,
+      "Bids": null,
       "Mother": "Dalila Luxor",
-      "Father": "Carvão VB",
-      "MaxBId": "5000",
-      "MaxBIdUserId": 1
+      "Father": "Carv\u00E3o VB",
+      "MaxBid": null,
+      "MaxBidUserId": 0
     },
     {
       "Id": 3,
       "ImageUrl": "assets/img/lotes/lote3.jpg",
       "Name": "Hades",
       "Sufix": "Estrela Negra",
-      "birthDate": "2023-01-01",
-      "sellPrice": 10000,
+      "BirthDate": null,
+      "SellPrice": 0,
       "MinPrice": 5000,
+      "Bids": null,
       "Mother": "Dalila Luxor",
-      "Father": "Carvão VB",
-      "MaxBId": "5000",
-      "MaxBIdUserId": 1
+      "Father": "Carv\u00E3o VB",
+      "MaxBid": null,
+      "MaxBidUserId": 0
     },
     {
       "Id": 4,
       "ImageUrl": "assets/img/lotes/lote4.jpg",
       "Name": "Hoshi",
       "Sufix": "Estrela Negra",
-      "birthDate": "2023-03-15",
-      "sellPrice": 10000,
+      "BirthDate": null,
+      "SellPrice": 0,
       "MinPrice": 5000,
+      "Bids": null,
       "Mother": "Dalila Luxor",
-      "Father": "Carvão VB",
-      "MaxBId": "5000",
-      "MaxBIdUserId": 1
+      "Father": "Carv\u00E3o VB",
+      "MaxBid": null,
+      "MaxBidUserId": 0
     },
     {
       "Id": 5,
       "ImageUrl": "assets/img/lotes/lote5.jpg",
       "Name": "Hyperion",
       "Sufix": "Estrela Negra",
-      "birthDate": "2023-01-01",
-      "sellPrice": 10000,
+      "BirthDate": null,
+      "SellPrice": 0,
       "MinPrice": 5000,
+      "Bids": null,
       "Mother": "Dalila Luxor",
-      "Father": "Carvão VB",
-      "MaxBId": "5000",
-      "MaxBIdUserId": 1
+      "Father": "Carv\u00E3o VB",
+      "MaxBid": null,
+      "MaxBidUserId": 0
     },
     {
       "Id": 6,
       "ImageUrl": "assets/img/lotes/lote6.JPG",
       "Name": "Hera",
       "Sufix": "Estrela Negra",
-      "birthDate": "2023-03-15",
-      "sellPrice": 10000,
+      "BirthDate": null,
+      "SellPrice": 0,
       "MinPrice": 5000,
+      "Bids": null,
       "Mother": "Dalila Luxor",
-      "Father": "Carvão VB",
-      "MaxBId": "5000",
-      "MaxBIdUserId": 1
+      "Father": "Carv\u00E3o VB",
+      "MaxBid": null,
+      "MaxBidUserId": 0
     }
   ]
 }

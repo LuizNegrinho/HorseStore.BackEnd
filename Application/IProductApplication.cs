@@ -4,6 +4,8 @@ namespace HorseStore.BackEnd.Application
 {
     public interface IProductApplication
     {
-       IEnumerable<Bid> GetBids(int productId);
+        bool DeleteBid(int id);
+        IEnumerable<Bid> GetBids(int productId);
+        Bid InsertBid(Bid bid);
     }
 }
