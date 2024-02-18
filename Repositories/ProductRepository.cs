@@ -11,17 +11,27 @@ namespace HorseStore.BackEnd.Repositories
 
         public IEnumerable<Lot> GetIndex(int id)
         {
-            var list = new List<Lot>();
             DataDTO data = ReadDB();
-
-            return data.Lots ?? list;          
+            return data.Lots ?? new List<Lot>();          
         }
-        public IEnumerable<Bid> GetBids(int productId)
+
+        public Lot GetProduct(int id)
+        {
+            DataDTO data = ReadDB();
+            return data.Lots.Where(lot => lot.Id == id).FirstOrDefault() ?? new Lot();
+        }
+        public IEnumerable<Bid> GetBids()
         {
             List<Bid> bids = new();
             DataDTO data = ReadDB();
 
             return data.Bids ?? bids;
+        }
+        public Bid GetBid(int bidId)
+        {
+            var bid = GetBids().FirstOrDefault(b => b.Id == bidId);            
+
+            return bid ?? new Bid();
         }
 
         public Bid InsertBid(Bid bid)
@@ -42,7 +52,8 @@ namespace HorseStore.BackEnd.Repositories
                 throw new Exception("Falha no sistema de arquivos.");
 
             Save(data);
-            return bid;           
+
+            return GetBid(bid.Id);           
         }
 
         public bool DeleteBid(int id)

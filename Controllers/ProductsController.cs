@@ -9,25 +9,31 @@ namespace HorseStore.BackEnd.Controllers
     public class ProductsController : Controller
     {
         private readonly IProductRepository _productRepository;
-        private readonly IProductApplication _productApplication;
+        private readonly IProductApplication _application;
 
         public ProductsController(IProductRepository productRepository, IProductApplication productApplication)
         {
             _productRepository = productRepository;
-            _productApplication = productApplication;
+            _application = productApplication;
         }
                 
 
         [HttpGet("GetIndex")]
         public IActionResult Index([FromQuery] int userId)
         {
-            return Ok(_productRepository.GetIndex(userId));
+            return Ok(_application.GetIndex(userId));
+        }
+
+        [HttpGet("GetLot")]
+        public IActionResult GetLot([FromQuery] int productId)
+        {
+            return Ok(_application.GetProduct(productId));
         }
 
         [HttpGet("GetBids")]
         public IActionResult GetBids([FromQuery] int productId)
         {
-            return Ok(_productApplication.GetBids(productId));
+            return Ok(_application.GetBids(productId));
         }
 
         [HttpPost("InsertBid")]
@@ -35,8 +41,8 @@ namespace HorseStore.BackEnd.Controllers
         {
             try
             {
-                var newBid = _productApplication.InsertBid(bid); 
-                return Ok(bid);
+                var newBid = _application.InsertBid(bid);
+                return Ok(newBid);
             }
             catch (Exception ex)
             {
@@ -45,9 +51,9 @@ namespace HorseStore.BackEnd.Controllers
         }
 
         [HttpDelete("DeleteBid")]
-        public IActionResult DeleteBid(int id) 
+        public IActionResult DeleteBid([FromQuery] int id) 
         {
-            bool deleted = _productApplication.DeleteBid(id);
+            bool deleted = _application.DeleteBid(id);
             return Ok(deleted);
         }
     }
