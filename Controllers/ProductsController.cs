@@ -29,5 +29,26 @@ namespace HorseStore.BackEnd.Controllers
         {
             return Ok(_productApplication.GetBids(productId));
         }
+
+        [HttpPost("InsertBid")]
+        public IActionResult InsertBid(Bid bid)
+        {
+            try
+            {
+                var newBid = _productApplication.InsertBid(bid); 
+                return Ok(bid);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("DeleteBid")]
+        public IActionResult DeleteBid(int id) 
+        {
+            bool deleted = _productApplication.DeleteBid(id);
+            return Ok(deleted);
+        }
     }
 }
