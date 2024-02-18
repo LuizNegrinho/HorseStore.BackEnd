@@ -26,7 +26,7 @@ namespace HorseStore.BackEnd.Application
         }
         public bool DeleteBid(int id)
         {
-            throw new NotImplementedException();
+            return _repository.DeleteBid(id);
         }
     }
 }
