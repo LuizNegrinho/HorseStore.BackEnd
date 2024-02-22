@@ -11,6 +11,7 @@ namespace HorseStore.BackEnd
             services.AddScoped<IProductApplication, ProductApplication>();
             services.AddScoped<ILoginApplication, LoginApplication>();
             services.AddScoped<ILoginRepository, LoginRepository>();
+            services.AddScoped<ICommonService, CommonService>();
         }
     }
 }
