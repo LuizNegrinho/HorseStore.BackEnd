@@ -1,4 +1,5 @@
-﻿using HorseStore.BackEnd.Repositories;
+﻿using HorseStore.BackEnd.Models;
+using HorseStore.BackEnd.Repositories;
 
 namespace HorseStore.BackEnd.Application
 {

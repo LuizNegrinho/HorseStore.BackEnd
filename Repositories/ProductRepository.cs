@@ -6,24 +6,28 @@ namespace HorseStore.BackEnd.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        private string _dbConnection = "Repositories/data.json";
+        private readonly ICommonService _commonService;
 
+        public ProductRepository(ICommonService commonService)
+        {
+            _commonService = commonService;                
+        }
 
         public IEnumerable<Lot> GetIndex(int id)
         {
-            DataDTO data = ReadDB();
+            DataDTO data = _commonService.ReadDB();
             return data.Lots ?? new List<Lot>();          
         }
 
         public Lot GetProduct(int id)
         {
-            DataDTO data = ReadDB();
+            DataDTO data = _commonService.ReadDB();
             return data.Lots.Where(lot => lot.Id == id).FirstOrDefault() ?? new Lot();
         }
         public IEnumerable<Bid> GetBids()
         {
             List<Bid> bids = new();
-            DataDTO data = ReadDB();
+            DataDTO data = _commonService.ReadDB();
 
             return data.Bids ?? bids;
         }
@@ -36,7 +40,7 @@ namespace HorseStore.BackEnd.Repositories
 
         public Bid InsertBid(Bid bid)
         {
-            DataDTO data = ReadDB();
+            DataDTO data = _commonService.ReadDB();
 
             if (data != null)
             {
@@ -51,7 +55,7 @@ namespace HorseStore.BackEnd.Repositories
             else
                 throw new Exception("Falha no sistema de arquivos.");
 
-            Save(data);
+            _commonService.Save(data);
 
             return GetBid(bid.Id);           
         }
@@ -60,7 +64,7 @@ namespace HorseStore.BackEnd.Repositories
         {
             try
             {
-                DataDTO data = ReadDB();
+                DataDTO data = _commonService.ReadDB();
 
                 if(data != null)
                 {
@@ -68,7 +72,7 @@ namespace HorseStore.BackEnd.Repositories
                     data.Bids.RemoveAll(b => b.Id == id);
                     if (initialCount == data.Bids.Count())
                         return false;
-                    return Save(data);
+                    return _commonService.Save(data);
                 }
                 return false;                
 
@@ -77,32 +81,6 @@ namespace HorseStore.BackEnd.Repositories
             {
                 return false;
             }
-        }   
-
-        private DataDTO ReadDB()
-        {
-            string data = File.ReadAllText(_dbConnection, Encoding.UTF8);
-            return JsonSerializer.Deserialize<DataDTO>(data) ?? throw new Exception("Falha ao acessar banco de dados.");
         }
-
-        private bool Save(DataDTO newDB)
-        {
-            try
-            {
-                string data = JsonSerializer.Serialize(newDB);
-                File.WriteAllText(_dbConnection, data, Encoding.UTF8);
-                return true;
-
-            }
-            catch (IOException)
-            {
-                return false;
-            }
-            
-
-        }
-       
-
-
     }
 }

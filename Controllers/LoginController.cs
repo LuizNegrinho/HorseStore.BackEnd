@@ -1,4 +1,5 @@
 ﻿using HorseStore.BackEnd.Application;
+using HorseStore.BackEnd.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HorseStore.BackEnd.Controllers
@@ -14,16 +15,16 @@ namespace HorseStore.BackEnd.Controllers
         }
 
         [HttpPost("Login")]
-        public IActionResult Login(string username, string password)
+        public IActionResult LogIn([FromBody]LogInModel login)
         {
             try
             {
-                var login = _loginApplication.Login(username, password);
-                return Ok(login);
+                var user = _loginApplication.LogIn(login);
+                return Ok(user);
             }
             catch (Exception ex)
             {
-                return StatusCode(403, ex.Message);                
+                return StatusCode(401, ex.Message);                
             }
             
         }

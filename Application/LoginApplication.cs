@@ -1,4 +1,5 @@
-﻿using HorseStore.BackEnd.Repositories;
+﻿using HorseStore.BackEnd.Models;
+using HorseStore.BackEnd.Repositories;
 
 namespace HorseStore.BackEnd.Application
 {
@@ -11,16 +12,9 @@ namespace HorseStore.BackEnd.Application
             _loginRepository = loginRepository;
         }
 
-        public LoginModel Login(string username, string password)
+        public User LogIn(LogInModel login)
         {
-
-            LoginModel user = _loginRepository.Login(username, password);
-
-            if (user.Id > 0)
-                return user;
-            throw new Exception("Login Inválido");
-
-                      
+            return _loginRepository.Login(login);                      
         }
     }
 }

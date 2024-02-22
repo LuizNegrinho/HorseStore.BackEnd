@@ -1,9 +1,10 @@
 ﻿using HorseStore.BackEnd.Application;
+using HorseStore.BackEnd.Models;
 
 namespace HorseStore.BackEnd.Repositories
 {
     public interface ILoginRepository
     {
-        LoginModel Login(string username, string password);
+        User Login(LogInModel login);
     }
 }

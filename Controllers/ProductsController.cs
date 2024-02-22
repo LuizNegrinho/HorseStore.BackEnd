@@ -1,4 +1,5 @@
 ﻿using HorseStore.BackEnd.Application;
+using HorseStore.BackEnd.Models;
 using HorseStore.BackEnd.Repositories;
 using Microsoft.AspNetCore.Mvc;
 

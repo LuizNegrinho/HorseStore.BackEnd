@@ -1,7 +1,10 @@
-﻿namespace HorseStore.BackEnd.Application
+﻿using HorseStore.BackEnd.Models;
+using HorseStore.BackEnd.Repositories;
+
+namespace HorseStore.BackEnd.Application
 {
     public interface ILoginApplication
     {
-        public LoginModel Login(string username, string password);
+        public User LogIn(LogInModel login);
     }
 }
